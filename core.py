@@ -54,7 +54,8 @@ def parse_path(path):
     if not path.endswith('.pdf'):
         path = path + ".pdf"
 
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if '/' in path:
+        os.makedirs(os.path.dirname(path), exist_ok=True)
 
     return path
 
