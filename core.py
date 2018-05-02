@@ -30,9 +30,8 @@ def get_service():
     return build("drive", "v3", http=creds.authorize(Http()))
 
 
-def download_file_pdf(file_id):
-    drive = get_service()
-    request = drive.files().export_media(
+def download_file_pdf(file_id, service):
+    request = service.files().export_media(
         fileId=file_id, mimeType="application/pdf"
     ).execute()
     return request
@@ -56,12 +55,13 @@ def parse_path(path):
     return path
 
 
-def main(file_id, file_path):
-    io_file = download_file_pdf(file_id)
+def main(file_id, file_path, service):
+    io_file = download_file_pdf(file_id, service)
     save_file(file_path, io_file)
 
 
 if __name__ == "__main__":
+    service = get_service()
     parser = build_parser()
     args = parser.parse_args()
-    main(args.file_id, parse_path(args.file_path))
+    main(args.file_id, parse_path(args.file_path), service)
