@@ -6,19 +6,24 @@ Given a file id and a path it will download the corresponding file to the specif
 
 Python 3.2 or above & pip
 
-### Installing
+## Installing
 
-run pip install -r requirements.txt
+1. obtain credentials file from google api console by following the step 1 from this link
+https://developers.google.com/drive/v3/web/quickstart/python
 
-#### Usage
+2. Copy the the downloaded file to the project folder and rename it to client_secret.json
+
+3. run pip install -r requirements.txt
+
+## Usage
 
 usage: core.py [-h] file_id file_path  
 
 Downloads a file by a given file ID and saves the file in PDF format  
 
-positional arguments:
-  file_id     File id retrieved from google  
-  file_path   EX: /home/user/mydir/myfile  
+positional arguments:  
+    file_id     File id retrieved from google  
+    file_path   EX: /home/user/mydir/myfile  
 
 optional arguments:  
   -h, --help  show this help message and exit  
