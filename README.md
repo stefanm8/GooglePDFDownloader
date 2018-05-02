@@ -12,16 +12,16 @@ run pip install -r requirements.txt
 
 #### Usage
 
-usage: core.py [-h] file_id file_path
+usage: core.py [-h] file_id file_path  
 
-Downloads a file by a given file ID and saves the file in PDF format
+Downloads a file by a given file ID and saves the file in PDF format  
 
 positional arguments:
-  file_id     File id retrieved from google
-  file_path   EX: /home/user/mydir/myfile
+  file_id     File id retrieved from google  
+  file_path   EX: /home/user/mydir/myfile  
 
-optional arguments:
-  -h, --help  show this help message and exit
+optional arguments:  
+  -h, --help  show this help message and exit  
 
 
-[run] -> python core.py insert_file_id insert_file_path
+[run] -> python core.py insert_file_id insert_file_path  
