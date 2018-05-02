@@ -10,8 +10,18 @@ Python 3.2 or above & pip
 
 run pip install -r requirements.txt
 
-#### How-To
+#### Usage
 
-python core.py insert_file_id insert_file_path
+usage: core.py [-h] file_id file_path
 
-run python core.py --help for more information
+Downloads a file by a given file ID and saves the file in PDF format
+
+positional arguments:
+  file_id     File id retrieved from google
+  file_path   EX: /home/user/mydir/myfile
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+
+[run] -> python core.py insert_file_id insert_file_path
