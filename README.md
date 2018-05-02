@@ -4,8 +4,7 @@ Given a file id and a path it will download the corresponding file to the specif
 
 ## Prerequisites
 
-Python 3.2 or above
-Pip
+Python 3.2 or above & pip
 
 ### Installing
 
