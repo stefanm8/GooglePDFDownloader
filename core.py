@@ -12,12 +12,8 @@ def build_parser():
     Downloads a file by a given file ID and saves the file in PDF format
     """
     parser = argparse.ArgumentParser(description=desc)
-    parser.add_argument(
-        "file_id", type=str, help="File id retrieved from google"
-    )
-    parser.add_argument(
-        "file_path", type=str, help="EX: /home/user/mydir/myfile"
-    )
+    parser.add_argument("file_id", type=str, help="File id retrieved from google")
+    parser.add_argument("file_path", type=str, help="EX: /home/user/mydir/myfile")
 
     return parser
 
@@ -48,17 +44,16 @@ def save_file(file_location, io_file):
 
 
 def parse_path(path):
-    if path.endswith('/'):
+    if path.endswith("/"):
         raise Exception("Invalid file name")
 
-    if not path.endswith('.pdf'):
+    if not path.endswith(".pdf"):
         path = path + ".pdf"
 
-    if '/' in path:
+    if "/" in path:
         os.makedirs(os.path.dirname(path), exist_ok=True)
 
     return path
-
 
 
 def main(file_id, file_path):
