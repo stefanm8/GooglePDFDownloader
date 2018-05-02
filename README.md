@@ -15,6 +15,9 @@ https://developers.google.com/drive/v3/web/quickstart/python
 
 3. run pip install -r requirements.txt
 
+4. run the script without arguments, you will get a url to put in your browser and authenticate with the corresponding user
+
+
 ## Usage
 
 usage: core.py [-h] file_id file_path  
