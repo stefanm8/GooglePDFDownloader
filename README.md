@@ -8,6 +8,7 @@ Python 3.2 or above & pip
 
 ## Installing
 
+### Option 1
 1. obtain credentials file from google api console by following the step 1 from this link
 https://developers.google.com/drive/v3/web/quickstart/python
 
@@ -20,16 +21,21 @@ https://developers.google.com/drive/v3/web/quickstart/python
 
 ## Usage
 
-usage: core.py [-h] file_id file_path  
+```console
+usage: gdownload [-h] [--client-secret CLIENT_SECRET]
+                 [--creds-storage CREDS_STORAGE]
+                 file_id file_path
 
-Downloads a file by a given file ID and saves the file in PDF format  
+Downloads a file by a given file ID and saves the file in PDF format
 
-positional arguments:  
-    file_id     File id retrieved from google  
-    file_path   EX: /home/user/mydir/myfile  
+positional arguments:
+  file_id               File id retrieved from google
+  file_path             EX: /home/user/mydir/myfile
 
-optional arguments:  
-  -h, --help  show this help message and exit  
-
-
-[run] -> python core.py insert_file_id insert_file_path  
+optional arguments:
+  -h, --help            show this help message and exit
+  --client-secret CLIENT_SECRET
+                        Credentials file from google api console
+  --creds-storage CREDS_STORAGE
+                        Where to store credentials or to find existing
+```
